@@ -13,4 +13,5 @@ html {
   position: relative;
   font-family: "Lato", sans-serif;
   overflow-x: hidden;
+  background-color: transparent;
 }

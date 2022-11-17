@@ -15,7 +15,7 @@ const Footer: FC = (children: any) => {
                 </Social>
                 <FooterInfo>
                     <FooterLogo />
-                    <p>Grand Cosmopolitan Hotel,<br></br>
+                    <p id="Footer">Grand Cosmopolitan Hotel,<br></br>
                         P.O. Box 38250, Al Barsha 1,<br></br>
                         Dubai, UAE.<br></br>
 

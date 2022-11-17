@@ -2,10 +2,11 @@ import React from "react";
 import { AboutBackground, AboutHeading, AboutText, AboutWrapper } from "./style";
 
 const About = () => {
+
     return (
         <>
-            <AboutHeading>
-                <h1>About US</h1>
+            <AboutHeading >
+                <h1 id="About">About US</h1>
             </AboutHeading>
             <AboutWrapper>
                 <AboutBackground />

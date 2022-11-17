@@ -35,7 +35,7 @@ export const GeneralInfo = styled.div({
 export const SliderHolder = styled.div({
     float: 'right',
     display: 'flex',
-    height: '100%',
+    height: '80vh',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
@@ -43,14 +43,24 @@ export const SliderHolder = styled.div({
 
 
 
-export const Slider = styled.div({
-    float: 'right',
-    width: '45vw',
-    height: '80%',
-    backgroundImage: `url("../images/background.jpg")`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center center'
-})
+export const Slider = styled.div(
+    {
+        maxWidth: '45vw',
+        maxHeight: '80%',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center',
+        transition: 'all 0.2s ease',
+        img: {
+            width: '45vw',
+            height: '350px',
+            animation: 'Loading 0.2s ease',
+            transition: 'all 0.2s ease',
+        },
+        "@keyframes Loading": {
+            "0%": { opacity: 0, transform: "translateX(+100px) " },
+            "100%": { opacity: 1, transform: "translateX(0px)" },
+        },
+    })
 
 export const ArrowHolder = styled.div({
     display: 'flex',
@@ -64,7 +74,8 @@ export const ArrowHolder = styled.div({
     },
     span: {
         margin: "0 0.5rem"
-    }
+    },
+
 })
 
 export const Arrow = styled.button({
@@ -72,4 +83,7 @@ export const Arrow = styled.button({
     border: 'none',
     backgroundColor: 'transparent',
     color: 'grey',
+    "&:hover": {
+        cursor: 'pointer',
+    }
 })

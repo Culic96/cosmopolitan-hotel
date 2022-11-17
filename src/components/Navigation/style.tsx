@@ -13,7 +13,7 @@ export const NavHolder = styled.div({
     height: '12vh',
     width: '100vw',
     display: 'flex',
-    backgroundColor: 'transparent'
+    backgroundColor: '#fafafa',
 })
 
 export const LogoHolder = styled.div({
@@ -39,7 +39,7 @@ export const NavLinks = styled.div({
     width: '85vw',
     marginRight: '20vw',
     a: {
-        color: '#fff',
+        color: '#000',
         textDecoration: 'none',
         fontSize: '1.3rem',
         fontWeight: '500',
@@ -49,7 +49,7 @@ export const NavLinks = styled.div({
     },
     "a:hover": {
         cursor: 'pointer',
-        color: '#f0f0f4',
+        color: '#a1a1a1',
         borderBottom: '2px solid #FAC86B',
         transition: 'all 0.5s ease'
     }
