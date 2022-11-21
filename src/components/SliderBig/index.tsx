@@ -3,7 +3,6 @@ import { SliderDataOne } from "../../sliderData/sliderDataOne";
 import { LogoHolder, NavHolder, NavLinks } from "../Navigation/style";
 import { SliderHead, SliderWrapper } from "./style";
 import ScrollTo from "react-scroll-into-view"
-import Navigation from "../Navigation";
 
 
 
@@ -13,11 +12,15 @@ const SliderBig = (children: any) => {
     const nextSlide = () => {
         setCurrent((current + 1) % length);
     }
+
+    setTimeout(() => {
+        nextSlide();
+    }, 6000)
+
     useEffect(() => {
-        setTimeout(() => {
-            nextSlide();
-        }, 6000)
-    }, [current])
+
+        console.log("re-rendered!")
+    }, [])
     return (
         <>
             <SliderWrapper>
@@ -36,7 +39,7 @@ const SliderBig = (children: any) => {
                 {SliderDataOne.map((slide, idx) => {
                     const id = idx;
                     return (
-                        <SliderHead>
+                        <SliderHead key={idx}>
                             {id === current &&
                                 <img key={id} alt="haha" src={slide.Image} />
 
